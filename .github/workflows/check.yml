@@ -1,0 +1,16 @@
+name: Validate static storefront
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate required HTML
+        run: |
+          test -s index.html
+          grep -qi '<!doctype html>' index.html
+          grep -q 'Blossom, play, read' index.html
+          grep -q 'Checkout is not active' index.html
