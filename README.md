@@ -9,3 +9,6 @@ Connect this GitHub repository using Pages Git integration. Set production branc
 
 ## Review
 Use feature branches and pull requests. Configure GitHub rulesets to require pull requests and checks where supported.
+
+## Preview deployment check
+A documentation-only commit on this feature branch can trigger a Cloudflare Pages preview build. The production branch and custom domain must remain unchanged until explicitly approved.
